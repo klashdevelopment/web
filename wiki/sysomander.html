@@ -104,7 +104,11 @@
             <a id="making" style="font-weight:bolder">Making a Sysomand</a><br>
             <div>
                 <ul>
-                    <li>Make a class that implements the Sysomand interface: <code>public class MyCommand implements Sysomand {</code></li>
+                    <li>Make a class that implements the Sysomand interface: <code>public class MyCommand implements Sysomand {</code><br></li>
+                    <li>Override the getPermission() to set permissions: <code>public SysomandPermission getPermission() {</code><br></li>
+                    <li>Override the tabComplete(CommandSender sender, String[] args, boolean isSentByPlayer) for tab completion: <code>public List<String> tabComplete(CommandSender sender, String[] args, boolean isSentByPlayer) {</code><br></li>
+                    <li>Override execute() for executing the command: <code>public void execute(CommandSender sender, String[] args, boolean isSentByPlayer) {</code><br></li>
+                    <li>Override getName() for the command name (ex. /hello): <code>public String getName()</code><br></li>
                 </ul>
             </div>
         </div>
