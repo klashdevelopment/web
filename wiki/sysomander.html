@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Klash Development</title>
+    <link rel="shortcut icon" href="img/klashlogots.png" type="image/png">
+    <link href="../fps.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            align-content: center;
+            font-size: 2.5vh;
+        }
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .navbar {
+            background-color: gray;
+            border-color: white;
+            color: gold;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+            font-size: 20px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            height: 90px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: 1vh;
+            text-decoration: none;
+            text-decoration-color: #fff;
+            color:gold;
+            border-radius: 15px;
+            width: calc(156.6666666667px * 2.3);
+            height: calc(44.1666666667px * 2);
+        }
+        .navbar-button {
+            top: 30px;
+            position:relative;
+            border-radius: 20.5px;
+            border-color: #fff;
+            color: black;
+            background-color: gold;
+            padding:19.5px;
+            font-size: 20px;
+            text-decoration: none;
+            text-decoration-color: #fff;
+        }
+        .right-nav {
+            float: right;
+            margin-right: 10px;
+        }
+        .left-nav {
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class='navbar'>
+        <div class='right-nav'>
+            <a class='navbar-button' href='index.html'>Home</a>
+            <a class='navbar-button' href='download.html'>Download</a>
+            <a class='navbar-button' href='contact.html'>Contact</a>
+        </div>
+        <div class='left-nav'>
+            <img class='title remove-outline-div' onclick="window.location.href = '#'" src="img/development_logo_full.png" alt="Logo-Full"></img>
+        </div>
+    </nav>
+    <div class="centered remove-outline-div">
+        <div class="left">
+            <div><strong>Sysomander</strong> is a spigot api for making commands.</div><br><br>Links: <a href="#setup">Setup</a> <a href="#adding">Adding to your code</a> <a href="#making">Making a sysomand</a><br><br>
+            <a id="setup" style="font-weight:bolder">Setup</a><br>
+            <div>
+            <ul>
+                <li>Drag Sysomand.jar into your plugins folder.</li>
+                <li>Put Sysomand.jar into your build path (maven/gradle coming soon)</li>
+            </ul>
+            </div><br><br>
+            <a id="adding" style="font-weight:bolder">Adding to your code</a><br>
+            <div><ul><li>Make a sysomander instance in your main plugin file: <code>public Sysomander commands;</code></li><br>
+                <li>In your onEnable() method: <code>commands = new Sysomander(this);</code></li><br>
+                    <li>In your onEnable() method aswell, initialize your commands like this: <code>commands.addSysomandToServer(new Sysomand());</code></li><br>
+                        <li>In your onCommand() method, set the return to: <code>commands.runCommandSystem(sender, label, args);</code></li></ul><br>
+            </div><br><br>
+            <a id="making" style="font-weight:bolder">Making a Sysomand</a><br>
+            <div>
+                <ul>
+                    <li>Make a class that implements the Sysomand interface: <code>public class MyCommand implements Sysomand {</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
