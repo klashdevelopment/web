@@ -3,7 +3,8 @@ var contactPage = `<sipro-text data-sipboldness=600>Here are all the contacts fo
 Twitter: (click) <a href="https://twitter.com/KlashDev">@klashdev</a><br>
 Discord: (click) <a href="https://dsc.gg/klashdev">dsc.gg/klashdev</a><br>
 TikTok: (click) <a href="https://tiktok.com/@klashdevelopment">@klashdevelopment</a><br>
-Email: (click) <a href="mailto:developmentklash@gmail.com">developmentklash@gmail.com</a><br>`
+Email: (click) <a href="mailto:developmentklash@gmail.com">developmentklash@gmail.com</a><br>
+Github: (click) <a href="https://github.com/klashdevelopment">gh/@klashdevelopment</a><br>`
 function Contact() {
   document.querySelector(".content").innerHTML = contactPage;
 }
